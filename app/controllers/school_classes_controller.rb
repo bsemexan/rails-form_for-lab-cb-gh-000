@@ -9,7 +9,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
-    @class = SchoolClass.new()
+    @class = SchoolClass.new(class_params(:title,:room_number))
   end
 
   private
