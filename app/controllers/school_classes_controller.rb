@@ -18,6 +18,10 @@ class SchoolClassesController < ApplicationController
     @class = SchoolClass.find(params[:id])
   end
 
+  def show
+    @class = SchoolClass.find(params[:id])
+  end
+
   private
 
   def class_params(*arg)
