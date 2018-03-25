@@ -9,5 +9,12 @@ class SchoolClassesController < ApplicationController
   end
 
   def create
+    @class = SchoolClass.new()
+  end
+
+  private
+
+  def class_params(*arg)
+    params.require(:title).permit(*arg)
   end
 end
