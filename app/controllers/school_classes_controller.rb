@@ -10,8 +10,12 @@ class SchoolClassesController < ApplicationController
 
   def create
     @class = SchoolClass.new(class_params(:title,:room_number))
-    @class.save 
+    @class.save
     redirect_to school_class_path(@class)
+  end
+
+  def edit
+    @class = SchoolClass.find(params[:id])
   end
 
   private
